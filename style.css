@@ -1,0 +1,240 @@
+/* ============ COLOR SYSTEM ============ */
+:root {
+  --color-neutral-95: hsl(220 10% 95%);
+  --color-neutral-90: hsl(220 10% 90%);
+  --color-neutral-80: hsl(220 10% 80%);
+  --color-neutral-70: hsl(220 10% 70%);
+  --color-neutral-60: hsl(220 10% 60%);
+  --color-neutral-50: hsl(220 10% 50%);
+  --color-neutral-40: hsl(220 10% 40%);
+  --color-neutral-30: hsl(220 10% 30%);
+  --color-neutral-20: hsl(220 10% 20%);
+  --color-neutral-10: hsl(220 10% 10%);
+}
+
+/* ============ GLOBAL ============ */
+html {
+  font: 100%/1.5 system-ui, sans-serif;
+  counter-reset: figure;
+  background: var(--color-neutral-95);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============ HEADINGS ============ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+h1 {
+  margin-block: 1em 0.5rem;
+  font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+  font-weight: 800;
+}
+
+h1 small {
+  display: block;
+  font-size: 0.4em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h2.proposition {
+  font-size: clamp(1rem, 1.8vw + 0.5rem, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 130%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* ============ LISTS ============ */
+ul,
+ol {
+  padding-inline-start: 2em;
+}
+
+li {
+  margin-top: 0.5em;
+}
+
+/* ============ HEADER ============ */
+header {
+  padding: 2em 1em;
+  text-align: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.authors {
+  margin-top: 1em;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ============ MAIN ============ */
+main {
+  max-width: 90%;
+  width: 100%;
+  margin: 2em auto;
+  background: white;
+  color: var(--color-neutral-20);
+  border-radius: 1rem;
+  padding: 3rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============ SECTIONS ============ */
+section {
+  margin-bottom: 3rem;
+}
+
+/* ============ FIGURES - ALL VISUALIZATIONS ============ */
+figure {
+  margin: 2em auto;
+  padding: 1.5rem;
+  border: 1px solid var(--color-neutral-80);
+  box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+  text-align: center;
+  background: white;
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+/* D3 Visualization Containers */
+#map-container,
+#chart-container {
+  width: 100%;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+#map-container svg,
+#chart-container svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Images */
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Placeholder containers */
+#vis5-container {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-neutral-95);
+  border-radius: 0.25rem;
+}
+
+/* Figure Captions */
+figcaption {
+  font-size: 0.85rem;
+  background: var(--color-neutral-95);
+  padding: 0.75rem;
+  margin-top: 1rem;
+  text-align: left;
+  counter-increment: figure;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+figcaption::before {
+  content: 'Figure ' counter(figure) ': ';
+  font-weight: bold;
+  color: var(--color-neutral-40);
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-neutral-90);
+  color: var(--color-neutral-30);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--color-neutral-80);
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: clamp(2em, 10vw, 3em);
+  }
+
+  h2.proposition {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+  }
+
+  figure {
+    padding: 1rem;
+  }
+
+  #map-container,
+  #chart-container {
+    min-height: 350px;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    max-width: 98%;
+    padding: 1rem;
+  }
+
+  header {
+    padding: 1em 0.5em;
+  }
+
+  figure {
+    padding: 0.75rem;
+  }
+
+  #map-container,
+  #chart-container {
+    min-height: 300px;
+  }
+
+  .authors {
+    font-size: 0.85rem;
+  }
+}

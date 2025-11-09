@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 3 — CMIP6 Dry Heat Visualization</title>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- D3 and TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Project 3:</small>
+        Are Temperate Coastal Zones Entering a New Era of "Dry Heat"?
+      </h1>
+
+      <p class="authors">
+        <strong>Daniel Phan</strong> — <em>d4phan@ucsd.edu</em><br>
+        <strong>Rachel Sakamoto</strong> — <em>rwsakamoto@ucsd.edu</em><br>
+        <strong>Kanishk Hari</strong> — <em>kahari@ucsd.edu</em><br>
+        <strong>Derek Huang</strong> — <em>dyh003@ucsd.edu</em>
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h3>Visualization 1: Global Temperature & Precipitation Map (Simulated Predictive Data)</h3>
+        
+        <figure>
+          <div id="map-container"></div>
+        </figure>
+
+        <figure>
+          <div id="chart-container"></div>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Visualization 2: Sea Surface Temperature</h3>
+
+        <figure>
+          <img src="images/sea_surf_temp Medium.png" alt="Sea surface temperature map">
+        </figure>
+
+        <h3>Visualization 3: Sea Temperature by Time </h3>
+        <figure>
+          <img src="images/sea_temp_time Medium.png" alt="Sea temperature time series">
+        </figure>
+
+        <h3>Visualization 4: TBD</h3>
+        <figure>
+          <div id="vis5-container">
+            <p style="color: #999; font-style: italic;">Placeholder for future visualization</p>
+          </div>
+        </figure>
+
+        <h3>Visualization 5: TBD</h3>
+        <figure>
+          <div id="vis5-container">
+            <p style="color: #999; font-style: italic;">Placeholder for future visualization</p>
+          </div>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <p>Data Source: CMIP6 HighResMIP (Coupled Model Intercomparison Project Phase 6)</p>
+    </footer>
+
+    <!-- JavaScript (order matters) -->
+    <script src="js/utils.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
