@@ -238,3 +238,17 @@ footer p {
     font-size: 0.85rem;
   }
 }
+
+#vis4-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  position: relative;
+}
+
+#vis4-container svg {
+  display: block;
+}
