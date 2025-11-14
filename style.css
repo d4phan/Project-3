@@ -48,6 +48,12 @@ h1 small {
   opacity: 0.8;
 }
 
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 1rem;
+}
+
 h2.proposition {
   font-size: clamp(1rem, 1.8vw + 0.5rem, 1.5rem);
   font-weight: 600;
@@ -153,6 +159,20 @@ figure img {
   border-radius: 0.25rem;
 }
 
+#vis4-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  position: relative;
+}
+
+#vis4-container svg {
+  display: block;
+}
+
 /* Figure Captions */
 figcaption {
   font-size: 0.85rem;
@@ -171,6 +191,45 @@ figcaption::before {
   color: var(--color-neutral-40);
 }
 
+/* ============ WRITEUP BOXES ============ */
+.writeup-box {
+  background: var(--color-neutral-95);
+  border: 1px solid var(--color-neutral-80);
+  border-left: 4px solid var(--color-neutral-50);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.writeup-box h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-neutral-20);
+  font-size: 1.1rem;
+}
+
+.writeup-box p {
+  line-height: 1.7;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.writeup-box p strong {
+  color: var(--color-neutral-20);
+  font-weight: 600;
+}
+
+.writeup-box em {
+  color: var(--color-neutral-60);
+  font-style: italic;
+}
+
+.reflection-box {
+  border-left-color: var(--color-neutral-30);
+  background: linear-gradient(to bottom, var(--color-neutral-95), white);
+}
+
 /* ============ FOOTER ============ */
 footer {
   text-align: center;
@@ -183,6 +242,11 @@ footer {
 
 footer p {
   margin: 0.5rem 0;
+}
+
+footer small {
+  font-size: 0.85em;
+  font-style: italic;
 }
 
 /* ============ RESPONSIVE ============ */
@@ -213,6 +277,14 @@ footer p {
   figcaption {
     font-size: 0.8rem;
   }
+
+  .writeup-box {
+    padding: 1.5rem;
+  }
+
+  .writeup-box li {
+    padding-left: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -237,18 +309,8 @@ footer p {
   .authors {
     font-size: 0.85rem;
   }
-}
 
-#vis4-container {
-  width: 100%;
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  position: relative;
-}
-
-#vis4-container svg {
-  display: block;
+  .writeup-box {
+    padding: 1rem;
+  }
 }
