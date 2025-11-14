@@ -41,3 +41,9 @@
     console.log("Note: CSV metadata not found, using simulated data");
   }
 })();
+setTimeout(() => {
+        const loadingElements = document.querySelectorAll('.loading');
+        loadingElements.forEach(el => {
+          el.style.display = 'none';
+        });
+      }, 1000);

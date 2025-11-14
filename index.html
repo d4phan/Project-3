@@ -6,7 +6,7 @@
     <title>Project 3 — CMIP6 Dry Heat Visualization</title>
 
     <!-- External Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href=" style.css" />
 
     <!-- D3 and TopoJSON -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -33,26 +33,38 @@
         <h3>Global Temperature & Precipitation Map</h3>
         
         <figure>
-          <div id="map-container"></div>
+          <div id="map-container">
+            <div class="loading"></div>
+          </div>
+          <figcaption>Interactive global map showing temperature and precipitation patterns across temperate coastal zones using CMIP6 HighResMIP climate model data.</figcaption>
         </figure>
 
         <figure>
-          <div id="chart-container"></div>
+          <div id="chart-container">
+            <div class="loading"></div>
+          </div>
+          <figcaption>Time series analysis of temperature and precipitation trends in selected coastal regions, highlighting the emergence of dry heat patterns.</figcaption>
         </figure>
-      <div class="writeup-box">
-          <h4>Write Up:</h4>
+
+        <div class="writeup-box">
+          <h4>Analysis Overview</h4>
           <p>
-            <!-- Write up goes in here -->
-            WIP
+            <!-- Write your writeup here -->
+             Writeup goes here!!!
+          </p>
+          <p>
+            <strong>Key findings and methodological approaches will be detailed here as the analysis progresses.</strong>
           </p>  
         </div>
       </section>
+    </main>
 
       
     </main>
 
     <footer>
-      <p>Data Source: CMIP6 HighResMIP (Coupled Model Intercomparison Project Phase 6)</p>
+      <p><strong>Data Source:</strong> CMIP6 HighResMIP (Coupled Model Intercomparison Project Phase 6)</p>
+      <p style="font-size: 0.85em; margin-top: 1rem; opacity: 0.7;">Climate Data Visualization Project • 2025</p>
     </footer>
 
     <!-- JavaScript (order matters) -->
