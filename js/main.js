@@ -2,15 +2,7 @@
 (async function() {
   // Simulate CMIP6 climate data for coastal regions
   // In production, this would load from actual CMIP6 zarr stores
-  const coastalRegions = [
-    { name: "California Coast", lat: 37, lon: -122, temp_change: 2.1, precip_change: -15 },
-    { name: "Mediterranean", lat: 40, lon: 15, temp_change: 2.8, precip_change: -22 },
-    { name: "Australian Coast", lat: -34, lon: 151, temp_change: 1.9, precip_change: -12 },
-    { name: "Chilean Coast", lat: -33, lon: -71, temp_change: 1.7, precip_change: -18 },
-    { name: "South African Coast", lat: -34, lon: 18, temp_change: 2.3, precip_change: -20 },
-    { name: "Japanese Coast", lat: 35, lon: 139, temp_change: 1.8, precip_change: -8 },
-    { name: "New Zealand Coast", lat: -41, lon: 174, temp_change: 1.6, precip_change: -10 }
-  ];
+  const coastalRegions = await fetch("data/coastal_regions_real_data.json").then(r => r.json());
 
   // Generate time series data (2000-2100)
   const timeSeriesData = coastalRegions.map(region => {
