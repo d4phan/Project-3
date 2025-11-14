@@ -4,7 +4,7 @@ let chartSvg, xScale, yScaleTemp, yScalePrecip, chartWidth, chartHeight, allTime
 function initChart(timeSeriesData, dispatcher) {
   allTimeSeriesData = timeSeriesData;
 
-  const margin = { top: 60, right: 80, bottom: 60, left: 70 };
+  const margin = { top: 60, right: 200, bottom: 60, left: 70 };
   chartWidth = 900 - margin.left - margin.right;
   chartHeight = 400 - margin.top - margin.bottom;
 
@@ -124,7 +124,7 @@ function initChart(timeSeriesData, dispatcher) {
   // Add legend
   const legend = chartSvg.append("g")
     .attr("class", "legend")
-    .attr("transform", `translate(${chartWidth - 200}, 10)`);
+    .attr("transform", `translate(${chartWidth + 40}, 10)`);
 
   legend.append("line")
     .attr("x1", 0).attr("x2", 30)

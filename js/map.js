@@ -1,6 +1,6 @@
 // js/map.js
 function initMap(coastalData, dispatcher) {
-  const width = 900;
+  const width = 1000;
   const height = 450;
 
   const svg = d3.select("#map-container")
@@ -87,7 +87,7 @@ function initMap(coastalData, dispatcher) {
       const legendHeight = 15;
       
       const legend = svg.append("g")
-        .attr("transform", `translate(${width - legendWidth - 30}, ${height - 60})`);
+        .attr("transform", `translate(${width - legendWidth - 15}, ${height - 45})`);
 
       const legendScale = d3.scaleLinear()
         .domain([0, 3])
